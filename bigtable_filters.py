@@ -2,13 +2,10 @@ import os
 from online_users import online_users
 from google.cloud import bigtable
 from google.cloud.bigtable.row_set import RowSet
-from google.cloud.bigtable.row_filters import RowFilter, RowFilterUnion, RowKeyRegexFilter
-from google.auth.credentials import AnonymousCredentials
+from google.cloud.bigtable.row_filters import RowFilterUnion, RowKeyRegexFilter
 
 os.environ['BIGTABLE_EMULATOR_HOST'] = '127.0.0.1:8086'
 
-def construct_filter(x):
-    filters=[ RowKeyRegexFilter(y) for y in x ]
 
 def read_prefix(project_id='no-project', instance_id='emulator', table_id='test'):
     client = bigtable.Client(project=project_id)#, admin=True)

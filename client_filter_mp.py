@@ -2,7 +2,6 @@ import os
 from online_users import online_users
 from google.cloud import bigtable
 from google.cloud.bigtable.row_set import RowSet
-from google.auth.credentials import AnonymousCredentials
 from multiprocessing import Pool
 
 os.environ['BIGTABLE_EMULATOR_HOST'] = '127.0.0.1:8086'

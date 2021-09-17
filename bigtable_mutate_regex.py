@@ -5,8 +5,6 @@ from google.cloud import bigtable
 from google.cloud import happybase
 from google.cloud.bigtable.row_set import RowSet
 from google.cloud.bigtable.row_filters import RowKeyRegexFilter, RowFilterChain, ColumnRangeFilter
-from google.auth.credentials import AnonymousCredentials
-
 
 os.environ['BIGTABLE_EMULATOR_HOST'] = '127.0.0.1:8086'
 
